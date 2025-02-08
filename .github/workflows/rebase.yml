@@ -1,0 +1,29 @@
+name: Rebase on Upstream
+
+
+
+on:
+
+  workflow_dispatch:
+
+
+
+jobs:
+
+  rebase:
+
+    runs-on: ubuntu-24.04
+
+
+
+    steps:
+
+    - uses: actions/checkout@master
+
+      with:
+
+        fetch-depth: 0
+
+
+
+    - uses: imba-tjd/rebase-upstream-action@master
